@@ -124,3 +124,97 @@ Examples:
 ## Example Flow
 
     events → trajectory → CCC → store → query by distance    
+    
+---
+
+## Experimental / Validation Section
+
+SQL-SI v0.1 includes three minimal validation paths:
+
+### 1. Runtime Trace
+
+Raw SQL-style rows are transformed into:
+
+- Trajectory objects
+- CCC objects
+- Persistent structural store entries
+
+Run:
+
+```bash
+mvn test
+
+Or:
+
+mvn exec:java -Dexec.mainClass="com.dbm.sqlsi.demo.SqlSiMarkdownTraceDemo"
+```
+
+### 2. SQL vs SQL-SI Comparative Demo
+
+Traditional SQL-like execution recomputes average patterns at query time.
+
+SQL-SI instead extracts and stores:
+
+- trajectories
+- CCC signatures
+- stability scores
+
+Run:
+
+    mvn exec:java -Dexec.mainClass="com.dbm.sqlsi.demo.SqlVsSqlSiComparativeDemo"
+
+### 3. Core Validation Claim
+
+Traditional SQL:
+
+    rows → query → recomputed result
+
+SQL-SI:
+
+    rows → trajectory → CCC → store → reuse
+
+This demonstrates the core SQL-SI transition:
+
+> from query-time recomputation to persistent structural intelligence.
+
+
+
+---
+
+## 7. Recommended Commit Layout
+
+    docs/
+      FIGURE-INDEX.md
+      figures/
+        fig-001-sql-si-layered-architecture.svg
+        fig-002-sql-to-sqlsi-flow.svg
+        fig-003-sql-vs-sqlsi-runtime.svg
+    
+    src/main/java/com/dbm/sqlsi/
+      metric/
+      trajectory/
+      ccc/
+      store/
+      runtime/
+      trace/
+      comparative/
+      demo/
+    
+    src/test/java/com/dbm/sqlsi/
+      trace/
+      comparative/
+
+## 8. This Pack’s Position
+
+This pack gives SQL-SI its first concrete runtime proof:
+
+    SQL rows
+    → TrajectoryObject
+    → CccObject
+    → StructuralObjectStore
+    → Markdown Trace
+    → Comparative Report
+
+核心结论可以放进 README Hero：
+
+> SQL-SI converts SQL from a recomputation-oriented query system into a reusable structural intelligence backend.
