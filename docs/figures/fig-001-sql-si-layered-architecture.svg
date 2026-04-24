@@ -1,0 +1,40 @@
+<svg width="1100" height="720" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100%" height="100%" fill="#0f172a"/>
+    <text x="550" y="55" text-anchor="middle" font-size="34" fill="#e5e7eb" font-family="Arial" font-weight="bold">
+        Fig-001 — SQL-SI Layered Architecture
+    </text>
+
+    <g font-family="Arial" font-size="22" font-weight="bold">
+        <rect x="250" y="110" width="600" height="80" rx="18" fill="#7c3aed"/>
+        <text x="550" y="160" text-anchor="middle" fill="white">L5 — PDS / Policy Decision Layer</text>
+
+        <rect x="250" y="220" width="600" height="80" rx="18" fill="#2563eb"/>
+        <text x="550" y="270" text-anchor="middle" fill="white">L4 — CCC Engine</text>
+
+        <rect x="250" y="330" width="600" height="80" rx="18" fill="#0891b2"/>
+        <text x="550" y="380" text-anchor="middle" fill="white">L3 — Trajectory / Graph Layer</text>
+
+        <rect x="250" y="440" width="600" height="80" rx="18" fill="#16a34a"/>
+        <text x="550" y="490" text-anchor="middle" fill="white">L2 — SQL Relational Layer</text>
+
+        <rect x="250" y="550" width="600" height="80" rx="18" fill="#ca8a04"/>
+        <text x="550" y="600" text-anchor="middle" fill="white">L1 — Raw Data</text>
+    </g>
+
+    <g stroke="#e5e7eb" stroke-width="4" marker-end="url(#arrow)">
+        <line x1="550" y1="550" x2="550" y2="520"/>
+        <line x1="550" y1="440" x2="550" y2="410"/>
+        <line x1="550" y1="330" x2="550" y2="300"/>
+        <line x1="550" y1="220" x2="550" y2="190"/>
+    </g>
+
+    <defs>
+        <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L7,3 z" fill="#e5e7eb"/>
+        </marker>
+    </defs>
+
+    <text x="550" y="680" text-anchor="middle" font-size="20" fill="#cbd5e1" font-family="Arial">
+        SQL becomes the Phase-1 structural substrate; CCC / Metric / PDS become the Phase-2 intelligence layer.
+    </text>
+</svg>
