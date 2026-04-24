@@ -1,17 +1,22 @@
 package com.dbm.sqlsi.metric;
 
-import com.dbm.sqlsi.trajectory.Trajectory;
+import com.dbm.sqlsi.trajectory.TrajectoryObject;
 
-public class EuclideanTrajectoryDistance implements MetricDistance<Trajectory> {
+public class EuclideanTrajectoryDistance implements MetricDistance<TrajectoryObject> {
 
     @Override
-    public double distance(Trajectory a, Trajectory b) {
-        int n = Math.min(a.getPoints().size(), b.getPoints().size());
-        double sum = 0;
-        for (int i = 0; i < n; i++) {
-            double d = a.getPoints().get(i) - b.getPoints().get(i);
-            sum += d * d;
+    public double distance(TrajectoryObject a, TrajectoryObject b) {
+        int n = Math.min(a.getValues().size(), b.getValues().size());
+        if (n == 0) {
+            return Double.POSITIVE_INFINITY;
         }
+
+        double sum = 0.0;
+        for (int i = 0; i < n; i++) {
+            double diff = a.getValues().get(i) - b.getValues().get(i);
+            sum += diff * diff;
+        }
+
         return Math.sqrt(sum);
     }
 }
