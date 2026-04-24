@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+title: "Predictive Digital Brain (PDB): A Unified Architecture for Structural Intelligence Integrating Prediction, Distribution, Risk, Contagion, Self, and Policy Decision Systems"
+message: "If you use this repository, please cite it using the metadata below."
+type: software
+authors:
+  - family-names: "Tan"
+    given-names: "Sizhe"
+repository-code: "TBD"
+license: "Apache-2.0"
+version: "1.0.0"
+keywords:
+  - "Predictive Digital Brain"
+  - "Structural Intelligence"
+  - "CCC"
+  - "Policy Decision System"
+  - "PDS"
+  - "Trajectory Intelligence"
+  - "Risk Intelligence"
+  - "Value at Risk"
+  - "VaR"
+  - "Contagion"
+  - "Regime Transition"
+  - "Self as Attractor"
+  - "Predictive Processing"
+  - "AI Architecture"
+  - "Decision Systems"
+abstract: "The Predictive Digital Brain (PDB) is a unified architecture for structural intelligence that moves beyond traditional prediction-based AI systems. It integrates bi-source CCC triggering, predictive expansion, distribution-aware reasoning, trajectory intelligence, risk evaluation, contagion dynamics, regime transition, self as predictive attractor, and policy-controlled decision into a single coherent intelligence loop."
