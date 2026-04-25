@@ -335,7 +335,7 @@ Assistant: chatGPT (OpenAI)
     
 License: Apache-2.0
  
-DOI: TBD
+DOI: 10.5281/zenodo.19770495
  
 Repository: https://github.com/sizhet/SQL-SI
    
