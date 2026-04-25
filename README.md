@@ -84,6 +84,12 @@ As a result, important structures are repeatedly recomputed rather than accumula
 
 ### 2.3 Structural Object Layer
 
+---
+
+![./docs/figures/fig-001-sql-si-layered-architecture.png](./docs/figures/fig-001-sql-si-layered-architecture.png)
+
+---
+
 SQL-SI introduces a structural object layer above ordinary relational data.
 
 Representative objects:
@@ -134,6 +140,12 @@ Conceptual query examples:
     DECIDE USING policy_safe;
 
 ### 2.5 Core Insight
+
+---
+
+![./docs/figures/fig-003-sql-vs-sqlsi-runtime.png](./docs/figures/fig-003-sql-vs-sqlsi-runtime.png)
+
+---
 
 SQL becomes the Phase-1 structural substrate.
 
