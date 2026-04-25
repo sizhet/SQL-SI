@@ -1,25 +1,24 @@
-# README (3-Screen Format)
-# 🟦 Screen 1 — Hero (3-Second Understanding)
-
 # SQL-SI
-
 ## SQL as a Structural Intelligence Backend
 
-> Transform SQL from a query engine into a **CCC / Trajectory / Metric / PDS–enabled intelligence system**
+> A proposal and reference scaffold for extending SQL from a query engine into a CCC / Trajectory / Metric / PDS–enabled structural intelligence backend.
 
-    SQL-SI = SQL + Structural Objects + Metric Space + CCC + PDS
-    
-## Core Idea
-- SQL already implements K + D (Knowledge + Decision)
-- Missing layers:
-    - CCC (structural invariants)
-    - Trajectory (temporal structure)
-    - Metric space (distance)
-    _ PDS (policy decision)
+```text
+SQL-SI = SQL + Structural Objects + Metric Space + CCC + PDS
+```
+## 1. Hero: 3-Second Understanding
 
-👉 SQL-SI fills this gap.
+SQL already provides a mature foundation for structured knowledge and deterministic reasoning.
 
-## Architecture
+However, traditional SQL systems still lack first-class support for:
+
+- CCC: reusable structural invariants
+- Trajectory: temporal and behavioral evolution
+- Graph: explicit topology and motif structures
+- Metric Space: distance-based comparison and search
+- PDS: policy-aware decision logic
+
+SQL-SI proposes to fill this gap.
 
     [ PDS / Policy Layer ]
     [ CCC Engine ]
@@ -27,161 +26,237 @@
     [ SQL Relational Layer ]
     [ Raw Data ]
     
-## Why It Matters
-- Moves AI from **probabilistic narrative → verifiable structure**
-- Enables **reusable structural memory**
-- Bridges **database systems ↔ structural intelligence**
+### Why It Matters
 
----
+SQL-SI shifts SQL from:
 
-# 🟨 Screen 2 — Deep Theory / Architecture
+    rows → query → recomputed result
 
-## 1. SQL as Intelligence System    
+to:
+
+    rows → trajectory → CCC → metric point → store → reuse
+
+Core transition:
+
+> From query-time recomputation to persistent structural intelligence.
+
+## 2. Deep Theory / Architecture
+
+### 2.1 SQL as an Intelligence Substrate
+
+SQL is not merely a data access language.
+
+It already provides:
+
+- declarative reasoning
+- schema-constrained knowledge representation
+- deterministic execution
+- query planning and cost-based decision support
+
+In PDS terms:
 
     S(u) → K(SQL) → D(Query Planner)
 
-SQL is already:
+SQL is therefore already partially aligned with the Knowledge and Decision layers of structural intelligence.
 
-- Declarative reasoning
-- Constraint-based inference
-- Deterministic execution
+### 2.2 The Core Limitation
 
-## 2. The Core Limitation
+Traditional SQL is powerful, but it does not natively persist higher-order structural objects.
 
-SQL lacks:
+It can compute:
 
-    CCC
-    Trajectory
-    Graph
-    Metric Distance
-    Policy
+    JOIN
+    GROUP BY
+    WINDOW
+    ORDER BY
+    FILTER
 
-Thus:
-
-    Every structure must be recomputed → no reuse → no evolution
-    
-## 3. Structural Object Layer (Key Upgrade)
-
-SQL-SI introduces:
+But it does not directly store and reuse:
 
     CCCObject
     TrajectoryObject
     GraphObject
+    MetricPoint
     PolicyObject
     EvidenceObject
-    
-## 4. Metric Space Integration
+
+As a result, important structures are repeatedly recomputed rather than accumulated, named, compared, and evolved.
+
+### 2.3 Structural Object Layer
+
+SQL-SI introduces a structural object layer above ordinary relational data.
+
+Representative objects:
+
+    CCCObject
+    TrajectoryObject
+    GraphObject
+    MotifObject
+    PolicyObject
+    EvidenceObject
+
+These objects are designed to support:
+
+    store
+    load
+    reuse
+    compare
+    validate
+    version
+    explain
+
+### 2.4 Metric Space Integration
+
+SQL-SI treats points and distance as first-class primitives.
 
     MetricPoint = any object with computable distance
 
 Examples:
 
-- CCCPoint
-- TrajectoryPoint
-- GraphPoint
+    CCCPoint
+    TrajectoryPoint
+    GraphPoint
+    PolicyStatePoint
+    DecisionTracePoint
 
-## 5. New Query Semantics (Conceptual)
+Conceptual query examples:
 
-    SELECT * FROM ccc_objects
+    SELECT *
+    FROM ccc_objects
     WHERE METRIC_DISTANCE(ccc, :target) < 0.1;
     
-    SELECT * FROM trajectories
+    SELECT *
+    FROM trajectories
     INFER REGIME_SHIFT;
     
-    SELECT * FROM candidates
+    SELECT *
+    FROM candidates
     DECIDE USING policy_safe;
-    
-## 6. Core Insight
 
-> SQL becomes Phase-1 substrate
-> CCC / Metric / PDS become Phase-2 intelligence  
+### 2.5 Core Insight
 
-# 🟩 Screen 3 — Engineering / Runtime / Demo
+SQL becomes the Phase-1 structural substrate.
 
-## Minimal Pipeline
+CCC, metric distance, trajectory intelligence, and PDS become the Phase-2 intelligence layer.
+
     SQL rows
+    → structural objects
+    → CCC extraction
+    → metric comparison
+    → policy-aware decision
+
+## 3. Engineering / Runtime / Demo
+
+### 3.1 Minimal Runtime Pipeline
+
+SQL-SI v0.1 implements a small reference pipeline:
+
+    SQL-style event rows
     → Trajectory extraction
-    → Graph construction
     → CCC discovery
-    → Metric embedding
-    → Storage
-    → Reuse
-    
-## Modules
-    com.dbm.sqlsi.object
+    → StructuralObjectStore
+    → Markdown trace
+    → SQL vs SQL-SI comparison
+
+### 3.2 Package Layout
+
     com.dbm.sqlsi.metric
-    com.dbm.sqlsi.ccc
     com.dbm.sqlsi.trajectory
-    com.dbm.sqlsi.runtime  
-    
-## Demo Capabilities (v0.1)
+    com.dbm.sqlsi.ccc
+    com.dbm.sqlsi.store
+    com.dbm.sqlsi.runtime
+    com.dbm.sqlsi.trace
+    com.dbm.sqlsi.comparative
+    com.dbm.sqlsi.demo
 
-- Extract trajectory from events
-- Compute metric distance
-- Discover simple CCC
-- Reuse CCC in query
+### 3.3 Demo Capabilities
 
-## Example Flow
+SQL-SI v0.1 can:
 
-    events → trajectory → CCC → store → query by distance    
-    
----
+- extract trajectories from SQL-style event rows
+- derive simple CCC signatures
+- compute basic metric distance
+- store structural objects
+- print Markdown traces
+- compare traditional SQL-like recomputation with SQL-SI structural reuse
 
-## Experimental / Validation Section
+## 4. Quick Start
 
-SQL-SI v0.1 includes three minimal validation paths:
+Run all tests:
 
-### 1. Runtime Trace
+    mvn test
+
+Run the runtime trace demo:
+
+    mvn exec:java -Dexec.mainClass="com.dbm.sqlsi.demo.SqlSiMarkdownTraceDemo"
+
+Run the SQL vs SQL-SI comparative demo:
+
+    mvn exec:java -Dexec.mainClass="com.dbm.sqlsi.demo.SqlVsSqlSiComparativeDemo"
+
+## 5. Experimental / Validation Section
+
+SQL-SI v0.1 includes three minimal validation paths.
+
+### 5.1 Runtime Trace
 
 Raw SQL-style rows are transformed into:
 
-- Trajectory objects
+- trajectory objects
 - CCC objects
-- Persistent structural store entries
+- persistent structural store entries
 
-Run:
+Expected conceptual output:
 
-```bash
-mvn test
+    EventRow
+    → TrajectoryObject
+    → CccObject
+    → StructuralObjectStore
+    → Markdown Trace
 
-Or:
+### 5.2 SQL vs SQL-SI Comparative Demo
 
-mvn exec:java -Dexec.mainClass="com.dbm.sqlsi.demo.SqlSiMarkdownTraceDemo"
-```
+Traditional SQL-like execution recomputes structural summaries at query time.
 
-### 2. SQL vs SQL-SI Comparative Demo
-
-Traditional SQL-like execution recomputes average patterns at query time.
-
-SQL-SI instead extracts and stores:
+SQL-SI extracts and stores:
 
 - trajectories
 - CCC signatures
 - stability scores
 
-Run:
+Comparison:
 
-    mvn exec:java -Dexec.mainClass="com.dbm.sqlsi.demo.SqlVsSqlSiComparativeDemo"
-
-### 3. Core Validation Claim
-
-Traditional SQL:
-
+    Traditional SQL:
     rows → query → recomputed result
 
-SQL-SI:
-
+    SQL-SI:
     rows → trajectory → CCC → store → reuse
 
-This demonstrates the core SQL-SI transition:
+### 5.3 Core Validation Claim
 
-> from query-time recomputation to persistent structural intelligence.
+This first demo validates the central SQL-SI transition:
 
+> SQL-SI converts SQL from a recomputation-oriented query system into a reusable structural intelligence backend.
 
+## 6. Figures
 
----
+See:
 
-## 7. Recommended Commit Layout
+    docs/FIGURE-INDEX.md
+
+Current figure pack:
+
+    docs/figures/fig-001-sql-si-layered-architecture.svg
+    docs/figures/fig-002-sql-to-sqlsi-flow.svg
+    docs/figures/fig-003-sql-vs-sqlsi-runtime.svg
+
+Recommended figure sequence:
+
+1. SQL-SI Layered Architecture
+2. SQL to SQL-SI Flow
+3. SQL vs SQL-SI Comparative Runtime
+
+## 7. Repository Layout
 
     docs/
       FIGURE-INDEX.md
@@ -204,17 +279,35 @@ This demonstrates the core SQL-SI transition:
       trace/
       comparative/
 
-## 8. This Pack’s Position
+## 8. Scope of v0.1
 
-This pack gives SQL-SI its first concrete runtime proof:
+This repository is a proposal and reference scaffold.
 
-    SQL rows
-    → TrajectoryObject
-    → CccObject
-    → StructuralObjectStore
-    → Markdown Trace
-    → Comparative Report
+It is not intended to be:
 
-核心结论可以放进 README Hero：
+- a complete SQL engine
+- a SQL parser
+- a replacement for existing relational databases
+- a production-grade graph or trajectory database
 
-> SQL-SI converts SQL from a recomputation-oriented query system into a reusable structural intelligence backend.
+Instead, SQL-SI v0.1 demonstrates a direction:
+
+> SQL can become a structural intelligence backend by adding persistent structural objects, metric comparison, CCC extraction, and policy-aware decision layers.
+
+## 9. Future Work
+
+Planned extensions include:
+
+- JDBC-backed extraction from real SQL databases
+- persistent structural object storage
+- graph object and motif extraction
+- trajectory similarity search
+- CCC stability validation
+- metric indexing
+- policy-aware query execution
+- Spark / Hadoop / lakehouse integration
+- EvidenceChain-based runtime validation
+
+## 10. One-Sentence Summary
+
+SQL-SI proposes a practical path for transforming SQL from a deterministic query language into a reusable, verifiable, metric-comparable structural intelligence backend.
