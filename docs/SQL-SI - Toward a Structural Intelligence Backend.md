@@ -125,6 +125,12 @@ Introduce first-class objects:
 
 > SQL must evolve from **query recomputation → structural persistence and reuse**
 
+---
+
+![./figures/fig-001-sql-si-layered-architecture.png](./figures/fig-001-sql-si-layered-architecture.png)
+
+---
+
 ## 6. Metric Space as First-Class Primitive
 
 A decisive extension:
@@ -187,6 +193,12 @@ A valid CCC must satisfy:
     bidirectional validation
     metric coherence
 
+---
+
+![./figures/fig-002-sql-to-sqlsi-flow.png](./figures/fig-002-sql-to-sqlsi-flow.png)
+
+---
+
 ### 7.3 Role in System
 Raw SQL → Structural Extraction → CCC → Storage → Reuse → Evolution
 
@@ -217,6 +229,12 @@ SQL-SI:
     motif extraction
     path indexing
     metric comparison
+
+---
+
+![./figures/fig-003-sql-vs-sqlsi-runtime.png](./figures/fig-003-sql-vs-sqlsi-runtime.png)
+
+---
 
 ## 9. Breaking the “SELECT for Everything” Constraint
 
