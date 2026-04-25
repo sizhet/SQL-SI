@@ -311,3 +311,26 @@ Planned extensions include:
 ## 10. One-Sentence Summary
 
 SQL-SI proposes a practical path for transforming SQL from a deterministic query language into a reusable, verifiable, metric-comparable structural intelligence backend.
+
+## 📜 Citation (Suggested)
+
+SQL-SI v0.1 — SQL as a Structural Intelligence Backend (CCC, Trajectory, Metric, PDS Integration)\
+Version: 0.1\
+Year: 2026 
+
+Author: Sizhe Tan \
+Assistant: chatGPT (OpenAI)
+    
+License: Apache
+ 
+DOI: TBD
+ 
+Repository: https://github.com/sizhet/SQL-SI
+   
+## DBM-SI Series of gitHub Repositories
+
+[DBM-SI-Repository-Series—Master-Narrative.md](docs/DBM-SI-Series-of-gitHub-Repositories/DBM-SI-Repository-Series—Master-Narrative.md)
+
+## DBM-SI Core Concepts Summary by Numbers
+
+[DBM-SI-Core-Concepts-Summary-by-Numbers.md](docs/DBM-SI-Series-of-gitHub-Repositories/DBM-SI-Core-Concepts-Summary-by-Numbers.md)
