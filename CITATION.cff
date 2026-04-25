@@ -2,12 +2,20 @@ cff-version: 1.2.0
 title: "SQL-SI v0.1 — SQL as a Structural Intelligence Backend (CCC, Trajectory, Metric, PDS Integration)"
 message: "If you use this repository, please cite it using the metadata below."
 type: software
+version: 0.1
+date-released: 2026-04-25
+
 authors:
   - family-names: "Tan"
     given-names: "Sizhe"
+
+contributors:
+  - name: "ChatGPT"
+    affiliation: "OpenAI"
+    type: other
+
 repository-code: "https://github.com/sizhet/SQL-SI"
-license: "Apache-2.0"
-version: "1.0.0"
+
 keywords:
   - "SQL"
   - "Structural Intelligence"
@@ -20,4 +28,9 @@ keywords:
   - "Graph Intelligence"
   - "Data Systems"
   - "AI Infrastructure"
+
 abstract: "SQL-SI (SQL Structural Intelligence) proposes a new paradigm that extends SQL from a relational query system into a structural intelligence backend. The approach introduces persistent structural objects (such as trajectories, graphs, and Common Concept Core (CCC) patterns), metric-space reasoning, and policy-aware decision layers (PDS) on top of traditional SQL systems.\n\nIn current AI pipelines, structured intelligence layers are often bypassed, with models operating directly on tokens or embeddings. SQL-SI restores this missing layer by enabling reusable, verifiable, and metric-comparable structural representations derived from SQL data.\n\nThis repository provides a conceptual framework, figure system, and minimal runnable Java prototype demonstrating trajectory extraction, CCC discovery, structural object storage, and comparative analysis against traditional SQL recomputation.\n\nSQL-SI is positioned as a proposal and reference scaffold rather than a complete database system, aiming to bridge database systems and next-generation structural intelligence architectures such as DBM-SI."
+
+license: "Apache-2.0"
+
+DOI: "TBD"

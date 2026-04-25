@@ -333,7 +333,7 @@ Year: 2026
 Author: Sizhe Tan \
 Assistant: chatGPT (OpenAI)
     
-License: Apache
+License: Apache-2.0
  
 DOI: TBD
  
