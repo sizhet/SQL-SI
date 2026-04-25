@@ -351,3 +351,6 @@ The value lies not only in each result, but in:
     
 17. Biological Perception and Structural Intelligence: CCC-like Structures, Bidirectional Stability, and the DBM-SI Interpretation of Animal Brains
     Repository: https://github.com/sizhet/Biological-Perception-and-Structural-Intelligence
+    
+18. SQL-SI - SQL as a Structural Intelligence Backend
+    Repository: https://github.com/sizhet/SQL-SI
